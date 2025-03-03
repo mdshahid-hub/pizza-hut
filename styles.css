@@ -1,0 +1,1245 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Dark Theme Header */
+.header {
+    background-color: #1f1f1f; /* Dark background */
+    color: #fff; /* White text */
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Logo */
+.logo img {
+    max-width: 70px; /* Adjust logo size */
+    border-radius: 20px;
+}
+
+/* Navigation Bar */
+.nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav-list li {
+    font-size: 16px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    color: #e60012; /* Pizza Hut Red */
+}
+
+/* CTA Button */
+.cta {
+    display: flex;
+    align-items: center;
+}
+
+.cta-btn {
+    background-color: #e60012; /* Pizza Hut Red */
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition:  0.3s ease-in;
+}
+
+.cta-btn:hover {
+    background-color: #ecddde;
+    color: #e60012;
+    box-shadow: 2px 2px 8px yellow;
+     /* Darker red on hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Adjusting Navbar Layout */
+    header .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Navigation List becomes vertical */
+    .nav-list {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 0;
+        display: none; /* Hidden by default for a collapsed menu */
+    }
+
+    .nav-list.show {
+        display: flex; /* Show menu when toggled */
+    }
+
+    .nav-list li {
+        text-align: left;
+        width: 100%;
+    }
+
+    /* Center the logo */
+    .logo {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    /* CTA Button */
+    .cta {
+        margin-top: 15px;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Hamburger Menu Icon */
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        color: #fff;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-list li a {
+        font-size: 14px;
+    }
+
+    .cta-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hero Section Styling */
+.hero {
+    background-color: #121212; /* Dark background */
+    color: #fff; /* White text */
+    height: 70vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('pizza1.jpg'); /* Hero background image */
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: #e60012; /* Pizza Hut Red */
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #c50010; /* Darker red on hover */
+    box-shadow: 2px 2px 8px;
+}
+
+.btn-secondary {
+    background-color: #e8dce8; /* Dark gray */
+    color: #000;
+}
+
+.btn-secondary:hover {
+    background-color: #ded143; /* Lighter gray on hover */
+    box-shadow: 2px 2px 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Promo Section Styling */
+.promo {
+    background-color: #121212; /* Dark background */
+    color: #fff; /* White text */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.promo h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.promo-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    
+}
+
+.promo-card {
+    background-color: #1f1f1f; /* Dark gray card background */
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.promo-card:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+}
+
+.promo-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.promo-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.promo-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #e60012; /* Pizza Hut Red */
+}
+
+.btn-primary:hover {
+    background-color: #c50010; /* Darker red on hover */
+}
+
+
+
+
+
+
+
+
+/* ...existing code... */
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Adjusting Navbar Layout */
+    header .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Navigation List becomes vertical */
+    .nav-list {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 0;
+        display: none; /* Hidden by default for a collapsed menu */
+    }
+
+    .nav-list.show {
+        display: flex; /* Show menu when toggled */
+    }
+
+    .nav-list li {
+        text-align: left;
+        width: 100%;
+    }
+
+    /* Center the logo */
+    .logo {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    /* CTA Button */
+    .cta {
+        margin-top: 15px;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Hamburger Menu Icon */
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        color: #fff;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+}
+
+/* ...existing code... */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Featured Menu Section Styling */
+.featured-menu {
+    background-color: #121212; /* Dark theme background */
+    color: #fff; /* White text */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.featured-menu h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    background-color: #1f1f1f; /* Dark gray card background */
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.menu-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #ccc; /* Lighter text for description */
+}
+
+.price {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e60012; /* Pizza Hut Red */
+    margin-bottom: 15px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #e60012; /* Pizza Hut Red */
+}
+
+.btn-primary:hover {
+    background-color: #c50010; /* Darker red on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Customization Section Styling */
+.customization {
+    background-color: #121212; /* Dark background */
+    color: #fff; /* White text */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.customization h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.customization p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #ccc; /* Lighter text for description */
+}
+
+.customization-form {
+    max-width: 600px;
+    width: 100vh;
+    margin: 0 auto;
+    background-color: #1f1f1f; /* Dark gray form background */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.checkbox-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #ccc;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    color: #fff;
+    background-color: #e60012; /* Pizza Hut Red */
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #c50010; /* Darker red on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Why Pizza Hut Section Styling */
+.why-pizza-hut {
+    background-color: #121212; /* Dark theme background */
+    color: #fff; /* White text */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.why-pizza-hut h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.why-pizza-hut p {
+    font-size: 1.2rem;
+    color: #ccc; /* Lighter text */
+    margin-bottom: 40px;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    background-color: #1f1f1f; /* Dark gray card background */
+    border-radius: 10px;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    
+}
+
+.feature-item:hover {
+    transform: translateY(-10px); /* Lift on hover */
+}
+
+.feature-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    border-radius:5px;
+}
+
+.feature-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: #ccc; /* Lighter text for description */
+    line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Customer Reviews Section */
+.customer-reviews {
+    background-color: #121212; /* Dark theme background */
+    color: #fff; /* White text */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.customer-reviews h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.customer-reviews p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #ccc; /* Lighter text */
+}
+
+.reviews {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.review-item {
+    background-color: #1f1f1f; /* Dark gray card background */
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.review-item:hover {
+    transform: translateY(-10px); /* Lift on hover */
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.review-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid #e60012; /* Pizza Hut red accent */
+}
+
+.review-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.rating {
+    color: #fbc02d; /* Gold stars for rating */
+    font-size: 1rem;
+}
+
+.review-item p {
+    font-size: 1rem;
+    color: #ccc; /* Lighter text for review content */
+    line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.location-section {
+    background-color: #121212; /* Dark theme background */
+    color: #fff; /* White text */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.location-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.location-section p {
+    font-size: 1.2rem;
+    color: #ccc; /* Light gray text */
+    margin-bottom: 40px;
+}
+
+.location-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.location-map iframe {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    height: 300px;
+}
+
+.location-info {
+    background-color: #1f1f1f; /* Slightly lighter dark gray */
+    color: #ccc; /* Light gray text */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    text-align: left;
+}
+
+.location-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.location-info p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    background-color: #e60012; /* Pizza Hut Red */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #bf0010; /* Darker red */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Contact Form Styles */
+.contact-form-section {
+    background-color: #121212; /* Dark background */
+    color: #fff; /* White text */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact-form-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.contact-form-section .container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #1f1f1f; /* Dark gray form background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border: 2px solid #e60012; /* Pizza Hut Red */
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    color: #fff;
+    background-color: #e60012; /* Pizza Hut Red */
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #c50010; /* Darker red on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-form-section h2 {
+        font-size: 2rem;
+    }
+
+    .contact-form-section .container {
+        padding: 20px;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+/* Footer Section */
+.footer {
+    background-color: #121212; /* Dark theme background */
+    color: #fff; /* White text */
+    padding: 40px 20px;
+    position: relative;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Footer Top Section */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+}
+
+.footer-logo h2 {
+    font-size: 2rem;
+    color: #e60012; /* Pizza Hut Red */
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #ccc; /* Light gray */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff; /* Bright white on hover */
+}
+
+/* Social Media Icons */
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-social a img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    text-align: center;
+    color: #ccc; /* Light gray text */
+    font-size: 0.9rem;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #e60012; /* Pizza Hut Red */
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #bf0010; /* Darker red */
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links {
+        margin-top: 15px;
+        flex-wrap: wrap;
+    }
+
+    .footer-social {
+        margin-top: 15px;
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .location-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .location-map iframe,
+    .location-info {
+        max-width: 100%;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .reviews {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .review-item {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .feature-item {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .customization-form {
+        padding: 20px;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .menu-items {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu-item {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .promo-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .promo-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Modal Popup Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1001; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #1f1f1f; /* Dark background */
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff; /* White text */
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-content input[type="email"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.modal-content button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
